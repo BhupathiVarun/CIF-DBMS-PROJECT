@@ -48,7 +48,7 @@ function trackRequest() {
   console.log(JSON.stringify(requestData));
 
   // Fetch data from the server
-  fetch("https://api.dhruvadeep.cloud/get_ids_by_equipment_name", {
+  fetch("http://localhost:8000/get_ids_by_equipment_name", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -109,7 +109,7 @@ function trackRequest() {
             token: token,
             ID: element.equipment_id,
           };
-          fetch("https://api.dhruvadeep.cloud/show_available_slots_equipment", {
+          fetch("http://localhost:8000/show_available_slots_equipment", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -167,7 +167,7 @@ function trackRequest() {
 
                   console.log(JSON.stringify(requestData));
                   fetch(
-                    "https://api.dhruvadeep.cloud/request_a_slot_for_project",
+                    "http://localhost:8000/request_a_slot_for_project",
                     {
                       method: "POST",
                       headers: {
